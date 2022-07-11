@@ -16,11 +16,11 @@ public class Level0GameView extends GameView {
     @Override
     public void setup() {
         commonSetup();
-
-        double objectSizeX = 100 / canvasWidth, objectSizeY = 100 / canvasHeight,
-                platformSizeX = 10 / canvasWidth, platformSizeY = 10 / canvasHeight;
+        double height = 0.1;
+        double width = height * canvasHeight / canvasWidth;
+        double platformSizeX = 10 / canvasWidth, platformSizeY = 10 / canvasHeight;
         player = new Player((float) 0, (float) 0.5,
-                objectSizeX, objectSizeY);
+                width, height);
 
         platforms = new ArrayList<>();
         platforms.add(new Platform(0.2, 0.6, 0.1, platformSizeY));

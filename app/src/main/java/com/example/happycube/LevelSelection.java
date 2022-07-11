@@ -41,7 +41,7 @@ public class LevelSelection extends AppCompatActivity {
                     )
             );
             lay.setGravity(Gravity.CENTER);
-            lay.setPadding(0, 0, 0, 50);
+            lay.setPadding(0, 0, 0, 10);
             for (int j = 0; j < 5; ++j) {
                 TextView btnTag = new TextView(this);
                 String levelName = String.valueOf(i + j + 1);
@@ -65,13 +65,12 @@ public class LevelSelection extends AppCompatActivity {
                 btnTag.setText(levelName);
                 btnTag.setTextColor(getResources().getColor(R.color.white));
                 btnTag.setGravity(Gravity.CENTER);
-                btnTag.setForegroundGravity(Gravity.CENTER);
-                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(250, 250);
-                lp.setMarginEnd(j == 4 ? 0 : 50);
+                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(150, 150);
+                lp.setMarginEnd(j == 4 ? 0 : 10);
                 btnTag.setLayoutParams(lp);
                 btnTag.setTextSize(24);
 
-                btnTag.setPadding(0, 0, 10, 0);
+                btnTag.setPadding(10, 10, 10, 10);
                 lay.addView(btnTag);
                 btnTag.setOnClickListener(v -> {
                     if (!isAvailable) {

@@ -6,8 +6,7 @@ import android.graphics.drawable.Drawable;
 public class Finish extends Body {
     final Drawable finishImage;
     final Drawable finishDoorImage;
-    public static final double REL_WIDTH = 200;
-    public static final double REL_HEIGHT = 200;
+    public static final double REL_HEIGHT = 0.15;
 
     public Finish(double x, double y, double width, double height, Drawable finishImage_, Drawable finishDoorImage_) {
         super(x, y, height, width);
@@ -16,7 +15,9 @@ public class Finish extends Body {
     }
 
     public static Finish from_bottom_part(double x, double y, double canvasWidth, double canvasHeight, Drawable finishImage, Drawable finishDoorImage) {
-        return new Finish(x, y - (REL_HEIGHT / canvasHeight) / 2, REL_WIDTH / canvasWidth, REL_HEIGHT / canvasHeight, finishImage, finishDoorImage);
+        double height = REL_HEIGHT;
+        double width = REL_HEIGHT * canvasHeight / canvasWidth;
+        return new Finish(x, y - height / 2, width, height, finishImage, finishDoorImage);
     }
 
     @Override
