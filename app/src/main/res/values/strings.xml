@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Happy Cube</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+    <string name="main_menu">Главное меню</string>
+    <string name="begin">Начать</string>
+    <string name="clear_progress">Сбросить прогресс</string>
+    <string name="back_home">Домой</string>
+    <string name="restart">Заново</string>
+</resources>
